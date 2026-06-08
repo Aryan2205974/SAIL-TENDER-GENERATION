@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+openai
+faiss-cpu
+sentence-transformers
+reportlab
+python-multipart
+numpy
