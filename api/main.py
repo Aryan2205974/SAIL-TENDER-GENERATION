@@ -1,3 +1,13 @@
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from the project root .env file
+root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(root_dir, ".env"))
+
+os.environ["HF_HUB_OFFLINE"] = os.getenv("HF_HUB_OFFLINE", "1")
+os.environ["TRANSFORMERS_OFFLINE"] = os.getenv("TRANSFORMERS_OFFLINE", "1")
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, Base, SessionLocal
@@ -19,8 +29,8 @@ app = FastAPI(
 # Configure CORS for frontend access
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -41,9 +51,13 @@ app.include_router(notifications_router.router)
 
 @app.on_event("startup")
 def startup_populate_db():
+    print("INFO:     FastAPI app startup: Checking database status and seeding...", flush=True)
     db = SessionLocal()
     try:
         seed_all(db)
+        print("INFO:     FastAPI app startup: Database initialization completed.", flush=True)
+    except Exception as e:
+        print(f"ERROR:    FastAPI app startup: Database initialization failed: {e}", flush=True)
     finally:
         db.close()
 

@@ -9,5 +9,8 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: "3.11.9"
+      - key: LOW_RAM_MODE
+        value: "true"
       - key: OPENROUTER_API_KEY
-        value: "" # Put your OpenRouter API key here or enter it in the Render dashboard
+        value: "" # Configured via Render Dashboard
+

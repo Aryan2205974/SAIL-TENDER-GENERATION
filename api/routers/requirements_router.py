@@ -13,8 +13,26 @@ router = APIRouter(prefix="/api/requirements", tags=["Requirements"])
 
 def _gen_ref_id(db: Session) -> str:
     year = datetime.now().year
-    count = db.query(models.Requirement).count() + 1
-    return f"REQ-{year}-{count:03d}"
+    prefix = f"REQ-{year}-"
+    existing = db.query(models.Requirement.ref_id).filter(
+        models.Requirement.ref_id.like(f"{prefix}%")
+    ).all()
+    
+    nums = []
+    for (ref,) in existing:
+        try:
+            num_str = ref.replace(prefix, "")
+            nums.append(int(num_str))
+        except ValueError:
+            continue
+            
+    next_num = max(nums) + 1 if nums else 1
+    
+    while True:
+        ref_id = f"{prefix}{next_num:03d}"
+        if not db.query(models.Requirement).filter(models.Requirement.ref_id == ref_id).first():
+            return ref_id
+        next_num += 1
 
 
 def _calc_completeness(data: dict) -> tuple[int, str, list, str]:
