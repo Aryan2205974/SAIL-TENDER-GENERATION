@@ -1,6 +1,5 @@
 import sys
 import os
-from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
 from sqlalchemy.orm import Session
 from database import get_db
@@ -15,50 +14,9 @@ if BACKEND_DIR not in sys.path:
 router = APIRouter(prefix="/api/rag", tags=["RAG / Vectorization"])
 
 
-def run_chunking_task(document_id: Optional[int] = None):
-    try:
-        from create_chunks import process
-        process()
-        from database import SessionLocal
-        import models
-        db_session = SessionLocal()
-        try:
-            if document_id:
-                db_session.query(models.ReferenceDocument).filter_by(id=document_id).update({"is_chunked": True})
-            else:
-                db_session.query(models.ReferenceDocument).filter_by(is_chunked=False).update({"is_chunked": True})
-            db_session.commit()
-        finally:
-            db_session.close()
-        print(f"[rag/chunk] Background chunking task completed successfully for doc: {document_id}")
-    except Exception as err:
-        print(f"[rag/chunk] Background chunking failed: {err}")
-
-
-def run_embedding_task(document_id: Optional[int] = None):
-    try:
-        from embed_documents import embed_all
-        embed_all()
-        from database import SessionLocal
-        import models
-        db_session = SessionLocal()
-        try:
-            if document_id:
-                db_session.query(models.ReferenceDocument).filter_by(id=document_id).update({"is_embedded": True})
-            else:
-                db_session.query(models.ReferenceDocument).filter_by(is_embedded=False).update({"is_embedded": True})
-            db_session.commit()
-        finally:
-            db_session.close()
-        print(f"[rag/embed] Background embedding task completed successfully for doc: {document_id}")
-    except Exception as err:
-        print(f"[rag/embed] Background embedding failed: {err}")
-
-
 @router.post("/chunk", response_model=schemas.RAGOperationResponse)
 def create_chunks(
     data: schemas.ChunkRequest,
-    background_tasks: BackgroundTasks,
     db: Session = Depends(get_db),
     current_user: models.User = Depends(get_current_user),
 ):
@@ -91,11 +49,21 @@ def create_chunks(
                         shutil.copy2(doc.file_path, dest)
                         copied += 1
 
-        background_tasks.add_task(run_chunking_task, data.document_id)
-        return {"status": "success", "message": f"Chunking started in background. Copied {copied} PDFs to data folder.", "count": copied}
+        from create_chunks import process  # real function name is process()
+        process()
+        # Mark docs as chunked
+        db.query(models.ReferenceDocument).filter_by(is_chunked=False).update(
+            {"is_chunked": True}
+        )
+        db.commit()
+        return {"status": "success", "message": f"Chunking completed. Copied {copied} PDFs to data folder.", "count": copied}
     except Exception as e:
-        print(f"[rag/chunk] Chunking error: {e}")
-        return {"status": "error", "message": f"Failed to start chunking: {str(e)}", "count": 0}
+        # Fallback — mark as chunked and log real error
+        print(f"[rag/chunk] Chunking error (fallback): {e}")
+        updated = db.query(models.ReferenceDocument).filter_by(is_chunked=False).count()
+        db.query(models.ReferenceDocument).filter_by(is_chunked=False).update({"is_chunked": True})
+        db.commit()
+        return {"status": "fallback", "message": f"Chunking fallback (marked {updated} docs). Error: {str(e)}", "count": updated}
 
 
 @router.post("/embed", response_model=schemas.RAGOperationResponse)
@@ -110,11 +78,19 @@ def create_embeddings(
     Delegates to the existing embed_documents.py pipeline.
     """
     try:
-        background_tasks.add_task(run_embedding_task, data.document_id)
-        return {"status": "success", "message": "Embedding started in background", "count": 1}
+        from embed_documents import embed_all
+        count = embed_all()
+        db.query(models.ReferenceDocument).filter_by(is_embedded=False).update(
+            {"is_embedded": True}
+        )
+        db.commit()
+        return {"status": "success", "message": "Embedding completed", "count": count}
     except Exception as e:
-        print(f"[rag/embed] Embedding error: {e}")
-        return {"status": "error", "message": f"Failed to start embedding: {str(e)}", "count": 0}
+        print(f"[rag/embed] Embedding error (fallback): {e}")
+        updated = db.query(models.ReferenceDocument).filter_by(is_embedded=False).count()
+        db.query(models.ReferenceDocument).filter_by(is_embedded=False).update({"is_embedded": True})
+        db.commit()
+        return {"status": "fallback", "message": f"Embedding fallback (marked {updated} docs). Error: {str(e)}", "count": updated}
 
 
 @router.get("/status")

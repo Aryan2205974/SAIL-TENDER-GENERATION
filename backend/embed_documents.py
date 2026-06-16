@@ -130,18 +130,10 @@ def embed_all() -> int:
     indexes. Returns the number of vectors indexed.
     """
     overall_start = time.time()
-    LOW_RAM_MODE = (
-        os.getenv("LOW_RAM_MODE", "false").lower() == "true"
-        or os.getenv("RENDER", "false").lower() == "true"
-    )
+    print("\nLoading Embedding Model...")
 
-    model = None
-    if not LOW_RAM_MODE:
-        print("\nLoading Embedding Model...")
-        model = SentenceTransformer(MODEL_NAME)
-        print("Model Loaded Successfully")
-    else:
-        print("INFO: LOW_RAM_MODE is active. Skipping SentenceTransformer loading.")
+    model = SentenceTransformer(MODEL_NAME)
+    print("Model Loaded Successfully")
 
     # Load chunks
     if not os.path.exists(CHUNKS_FILE):
@@ -249,52 +241,49 @@ CONTENT:
     for section, count in sorted(section_counter.items(), key=lambda x: x[1], reverse=True):
         print(f"{section:<30} {count:,}")
 
-    # Generate embeddings if not in LOW_RAM_MODE
-    if not LOW_RAM_MODE and model:
-        all_embeddings = []
-        embedding_start = time.time()
-        print("\nGenerating Embeddings...\n")
+    # Generate embeddings
+    all_embeddings = []
+    embedding_start = time.time()
+    print("\nGenerating Embeddings...\n")
 
-        for i in tqdm(range(0, len(texts), BATCH_SIZE)):
-            batch = texts[i:i + BATCH_SIZE]
-            embeddings = model.encode(
-                batch,
-                batch_size=BATCH_SIZE,
-                show_progress_bar=False,
-                normalize_embeddings=True,
-                convert_to_numpy=True
-            )
-            all_embeddings.extend(embeddings)
-            print(f"Processed {min(i+BATCH_SIZE,len(texts)):,}/{len(texts):,}")
+    for i in tqdm(range(0, len(texts), BATCH_SIZE)):
+        batch = texts[i:i + BATCH_SIZE]
+        embeddings = model.encode(
+            batch,
+            batch_size=BATCH_SIZE,
+            show_progress_bar=False,
+            normalize_embeddings=True,
+            convert_to_numpy=True
+        )
+        all_embeddings.extend(embeddings)
+        print(f"Processed {min(i+BATCH_SIZE,len(texts)):,}/{len(texts):,}")
 
-        embeddings_array = np.array(all_embeddings, dtype=np.float32)
-        print(f"\nEmbedding Time: {time.time()-embedding_start:.2f}s")
-        print(f"\nEmbedding Shape: {embeddings_array.shape}")
+    embeddings_array = np.array(all_embeddings, dtype=np.float32)
+    print(f"\nEmbedding Time: {time.time()-embedding_start:.2f}s")
+    print(f"\nEmbedding Shape: {embeddings_array.shape}")
 
-        # Normalize and build FAISS index
-        faiss.normalize_L2(embeddings_array)
-        dimension = embeddings_array.shape[1]
-        print(f"Vector Dimension: {dimension}")
+    # Normalize and build FAISS index
+    faiss.normalize_L2(embeddings_array)
+    dimension = embeddings_array.shape[1]
+    print(f"Vector Dimension: {dimension}")
 
-        if len(embeddings_array) > 5000:
-            nlist = min(1024, max(50, len(embeddings_array) // 40))
-            print(f"\nCreating IVF Index")
-            print(f"Clusters: {nlist}")
-            quantizer = faiss.IndexFlatIP(dimension)
-            index = faiss.IndexIVFFlat(quantizer, dimension, nlist, faiss.METRIC_INNER_PRODUCT)
-            print("\nTraining Index...")
-            index.train(embeddings_array)
-        else:
-            print("\nCreating Flat Index")
-            index = faiss.IndexFlatIP(dimension)
-
-        index.add(embeddings_array)
-        print(f"\nIndexed {index.ntotal:,} vectors")
-
-        # Save FAISS index
-        faiss.write_index(index, INDEX_FILE)
+    if len(embeddings_array) > 5000:
+        nlist = min(1024, max(50, len(embeddings_array) // 40))
+        print(f"\nCreating IVF Index")
+        print(f"Clusters: {nlist}")
+        quantizer = faiss.IndexFlatIP(dimension)
+        index = faiss.IndexIVFFlat(quantizer, dimension, nlist, faiss.METRIC_INNER_PRODUCT)
+        print("\nTraining Index...")
+        index.train(embeddings_array)
     else:
-        print("\nINFO: LOW_RAM_MODE is active. Skipping embedding generation and FAISS indexing.")
+        print("\nCreating Flat Index")
+        index = faiss.IndexFlatIP(dimension)
+
+    index.add(embeddings_array)
+    print(f"\nIndexed {index.ntotal:,} vectors")
+
+    # Save FAISS index
+    faiss.write_index(index, INDEX_FILE)
 
     # Save metadata PKL
     with open(METADATA_FILE, "wb") as f:
@@ -340,7 +329,7 @@ CONTENT:
     print(f"Total Chunks           : {len(texts):,}")
     print(f"Metadata Records       : {len(metadata):,}")
     print(f"Embedding Model        : {MODEL_NAME}")
-    print(f"FAISS Vectors          : {index.ntotal if index else 0}")
+    print(f"FAISS Vectors          : {index.ntotal:,}")
     print(f"Index Saved            : {INDEX_FILE}")
     print(f"Metadata PKL Saved     : {METADATA_FILE}")
     print(f"Metadata JSON Saved    : {METADATA_JSON}")
@@ -348,7 +337,7 @@ CONTENT:
     print(f"Total Runtime         : {time.time()-overall_start:.2f}s")
     print("=" * 80)
 
-    return index.ntotal if index else len(texts)
+    return index.ntotal
 
 
 if __name__ == "__main__":
