@@ -16,7 +16,7 @@ export const ReferencesView: React.FC = () => {
   } = useStore();
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedDocs, setSelectedDocs] = useState<number[]>([1, 2, 3]); // pre-select some for demo
+  const [selectedDocs, setSelectedDocs] = useState<number[]>([]); 
   const [isUploading, setIsUploading] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
 
