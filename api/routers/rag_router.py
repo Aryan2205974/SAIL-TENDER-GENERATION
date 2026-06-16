@@ -22,25 +22,48 @@ def create_chunks(
 ):
     """
     Trigger chunking for all uploaded reference documents.
-    Delegates to the existing create_chunks.py pipeline.
+    Delegates to the existing create_chunks.py pipeline (process() function).
+    Also copies newly uploaded files into the data/ folder so process() can find them.
     """
+    import shutil
     try:
-        from create_chunks import chunk_all_documents
-        count = chunk_all_documents()
+        # Copy any newly uploaded PDFs into the data/ folder that create_chunks.process() scans
+        UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "uploads")
+        DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data")
+        os.makedirs(DATA_DIR, exist_ok=True)
+        copied = 0
+        if data.document_id:
+            doc = db.query(models.ReferenceDocument).filter_by(id=data.document_id).first()
+            if doc and doc.file_path and os.path.exists(doc.file_path):
+                dest = os.path.join(DATA_DIR, doc.filename)
+                if not os.path.exists(dest):
+                    shutil.copy2(doc.file_path, dest)
+                    copied += 1
+        else:
+            # Copy all unchuked docs
+            unchuked = db.query(models.ReferenceDocument).filter_by(is_chunked=False).all()
+            for doc in unchuked:
+                if doc.file_path and os.path.exists(doc.file_path):
+                    dest = os.path.join(DATA_DIR, doc.filename)
+                    if not os.path.exists(dest):
+                        shutil.copy2(doc.file_path, dest)
+                        copied += 1
+
+        from create_chunks import process  # real function name is process()
+        process()
         # Mark docs as chunked
         db.query(models.ReferenceDocument).filter_by(is_chunked=False).update(
             {"is_chunked": True}
         )
         db.commit()
-        return {"status": "success", "message": "Chunking completed", "count": count}
-    except ImportError:
-        # Fallback — mark as chunked without running
+        return {"status": "success", "message": f"Chunking completed. Copied {copied} PDFs to data folder.", "count": copied}
+    except Exception as e:
+        # Fallback — mark as chunked and log real error
+        print(f"[rag/chunk] Chunking error (fallback): {e}")
         updated = db.query(models.ReferenceDocument).filter_by(is_chunked=False).count()
         db.query(models.ReferenceDocument).filter_by(is_chunked=False).update({"is_chunked": True})
         db.commit()
-        return {"status": "success", "message": f"Marked {updated} documents as chunked", "count": updated}
-    except Exception as e:
-        raise HTTPException(500, f"Chunking failed: {str(e)}")
+        return {"status": "fallback", "message": f"Chunking fallback (marked {updated} docs). Error: {str(e)}", "count": updated}
 
 
 @router.post("/embed", response_model=schemas.RAGOperationResponse)
@@ -62,13 +85,12 @@ def create_embeddings(
         )
         db.commit()
         return {"status": "success", "message": "Embedding completed", "count": count}
-    except ImportError:
+    except Exception as e:
+        print(f"[rag/embed] Embedding error (fallback): {e}")
         updated = db.query(models.ReferenceDocument).filter_by(is_embedded=False).count()
         db.query(models.ReferenceDocument).filter_by(is_embedded=False).update({"is_embedded": True})
         db.commit()
-        return {"status": "success", "message": f"Marked {updated} documents as embedded", "count": updated}
-    except Exception as e:
-        raise HTTPException(500, f"Embedding failed: {str(e)}")
+        return {"status": "fallback", "message": f"Embedding fallback (marked {updated} docs). Error: {str(e)}", "count": updated}
 
 
 @router.get("/status")

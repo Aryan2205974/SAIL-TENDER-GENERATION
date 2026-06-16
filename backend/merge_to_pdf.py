@@ -8,14 +8,7 @@ from reportlab.platypus import (
 )
 from reportlab.lib.styles import getSampleStyleSheet
 
-SUBSECTION_DIR = "subsections"
 
-
-
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-
-MERGED_MD = f"Tender_Document_{timestamp}.md"
-OUTPUT_PDF = f"Tender_Document_{timestamp}.pdf"
 
 SECTION_ORDER = [
     "NOTICE_INVITING_TENDER",
@@ -37,82 +30,54 @@ SECTION_ORDER = [
 ]
 
 
-def merge_markdown():
+def merge_markdown(output_dir):
 
     merged_content = []
 
     for section in SECTION_ORDER:
 
-        section_path = os.path.join(
-            SUBSECTION_DIR,
-            section
+        section_file = os.path.join(
+            output_dir,
+            section + ".md"
         )
 
-        if not os.path.exists(section_path):
+        if not os.path.exists(section_file):
             continue
 
-        if not os.path.isdir(section_path):
-            continue
+        with open(
+            section_file,
+            "r",
+            encoding="utf-8"
+        ) as f:
+            merged_content.append(f.read())
 
-        merged_content.append(
-            f"# {section.replace('_', ' ')}\n\n"
-        )
+        merged_content.append("\n\n")
 
-        # No alphabetical sorting
-        for file in os.listdir(section_path):
+    merged_text = "\n".join(merged_content)
 
-            if not file.endswith(".md"):
-                continue
-
-            file_path = os.path.join(
-                section_path,
-                file
-            )
-
-            subsection = (
-                file.replace(".md", "")
-                .replace("_", " ")
-            )
-
-            merged_content.append(
-                f"## {subsection}\n\n"
-            )
-
-            with open(
-                file_path,
-                "r",
-                encoding="utf-8"
-            ) as f:
-
-                merged_content.append(
-                    f.read()
-                )
-
-            merged_content.append("\n\n")
+    merged_md_path = os.path.join(
+        output_dir,
+        "Tender_Document.md"
+    )
 
     with open(
-        MERGED_MD,
+        merged_md_path,
         "w",
         encoding="utf-8"
     ) as f:
-
-        f.write(
-            "\n".join(merged_content)
-        )
+        f.write(merged_text)
 
     print(
-        f"Merged Markdown Saved: {MERGED_MD}"
+        f"Merged Markdown Saved: {merged_md_path}"
     )
 
-    return "\n".join(
-        merged_content
-    )
+    return merged_text, merged_md_path
 
 
-def markdown_to_pdf(text):
+def markdown_to_pdf(text, pdf_path):
 
     doc = SimpleDocTemplate(
-        OUTPUT_PDF
+        pdf_path
     )
 
     styles = getSampleStyleSheet()
@@ -177,14 +142,33 @@ def markdown_to_pdf(text):
     doc.build(story)
 
     print(
-        f"PDF Saved: {OUTPUT_PDF}"
+        f"PDF Saved: {pdf_path}"
     )
+
+    return pdf_path
 
 
 if __name__ == "__main__":
+    # Find the latest tender folder in generated_tenders
+    base_dir = "generated_tenders"
+    if os.path.exists(base_dir):
+        subdirs = [
+            os.path.join(base_dir, d)
+            for d in os.listdir(base_dir)
+            if os.path.isdir(os.path.join(base_dir, d)) 
+            and d.startswith("tender_")
+            and any(f.endswith(".md") and f != "Tender_Document.md" for f in os.listdir(os.path.join(base_dir, d)))
+        ]
+        if subdirs:
+            # Sort by creation time / name to get the latest
+            subdirs.sort()
+            latest_dir = subdirs[-1]
+            print(f"Automatically selected latest tender folder for merging: {latest_dir}")
 
-    merged_text = merge_markdown()
-
-    markdown_to_pdf(
-        merged_text
-    )
+            merged_text, merged_md_path = merge_markdown(latest_dir)
+            pdf_path = os.path.join(latest_dir, "Tender_Document.pdf")
+            markdown_to_pdf(merged_text, pdf_path)
+        else:
+            print(f"No tender folders found in '{base_dir}'. Please generate a tender first.")
+    else:
+        print(f"Directory '{base_dir}' does not exist. Please generate a tender first.")

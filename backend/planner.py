@@ -523,22 +523,22 @@ SECTION_TEMPLATES = {
     ]
 }
 SECTION_LENGTH = {
-    "NOTICE INVITING TENDER": 500,
-    "INSTRUCTIONS TO BIDDERS": 1000,
-    "ELIGIBILITY CRITERIA": 800,
-    "SCOPE OF WORK": 1200,
-    "TECHNICAL SPECIFICATION": 2500,
-    "QUALITY ASSURANCE": 800,
-    "INSPECTION AND TESTING": 800,
-    "PACKING AND MARKING": 500,
-    "DELIVERY CONDITIONS": 600,
-    "PAYMENT TERMS": 500,
-    "SAFETY REQUIREMENTS": 500,
-    "GENERAL CONDITIONS OF CONTRACT": 1800,
-    "SPECIAL CONDITIONS OF CONTRACT": 1000,
-    "PENALTY CLAUSE": 400,
-    "ANNEXURES": 1000,
-    "FORMS": 800
+    "NOTICE INVITING TENDER": 1200,
+    "INSTRUCTIONS TO BIDDERS": 2400,
+    "ELIGIBILITY CRITERIA": 2000,
+    "SCOPE OF WORK": 3000,
+    "TECHNICAL SPECIFICATION": 6000,
+    "QUALITY ASSURANCE": 2000,
+    "INSPECTION AND TESTING": 2000,
+    "PACKING AND MARKING": 1200,
+    "DELIVERY CONDITIONS": 1500,
+    "PAYMENT TERMS": 1200,
+    "SAFETY REQUIREMENTS": 1200,
+    "GENERAL CONDITIONS OF CONTRACT": 4500,
+    "SPECIAL CONDITIONS OF CONTRACT": 2400,
+    "PENALTY CLAUSE": 1000,
+    "ANNEXURES": 2400,
+    "FORMS": 2000
 }
 TOTAL_TARGET_WORDS = sum(
     SECTION_LENGTH.values()
@@ -547,11 +547,12 @@ TOTAL_TARGET_WORDS = sum(
 # RETRIEVE CONTEXT
 # =====================================================
 
-def get_reference_context(requirement):
+def get_reference_context(requirement, company=None):
 
     try:
         context = build_context(
             query=requirement,
+            company=company,
             top_k=10
         )
 
@@ -566,9 +567,9 @@ def get_reference_context(requirement):
 # CREATE PLAN
 # =====================================================
 
-def create_tender_plan(requirement):
+def create_tender_plan(requirement, company=None):
 
-    context = get_reference_context(requirement)
+    context = get_reference_context(requirement, company=company)
 
     sections = []
 
@@ -591,6 +592,7 @@ def create_tender_plan(requirement):
     return {
 
         "requirement": requirement,
+        "company": company,
         "reference_context": context,
         "sections": sections
 
@@ -656,10 +658,17 @@ if __name__ == "__main__":
 
     requirement = input(
         "\nTender Requirement:\n"
-    )
+    ).strip()
+
+    company = input(
+        "\nCompany (SAIL/NTPC/BHEL etc, leave blank for all):\n"
+    ).strip()
+
+    company = company if company else None
 
     plan = create_tender_plan(
-        requirement
+        requirement,
+        company=company
     )
 
     save_plan(plan)

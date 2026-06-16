@@ -218,7 +218,7 @@ def generate_plan(
     # Try actual planner
     try:
         from planner import create_tender_plan
-        plan = create_tender_plan(req.scope or req.title)
+        plan = create_tender_plan(req.scope or req.title, company=req.department)
     except Exception:
         # Fallback plan
         plan = {
@@ -425,6 +425,7 @@ def _run_generation(tender_id: int, req_title: str, req_scope: str, user_name: s
                         section=section_name,
                         subsection=sub,
                         target_words=200,
+                        company=tender.requirement.department if tender.requirement else None,
                     )
                     text = sanitize_text(text)
                 except Exception as e:

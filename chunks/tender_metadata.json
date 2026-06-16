@@ -1,0 +1,1682 @@
+[
+  {
+    "source": "AIConsultingTender_20260401.pdf",
+    "organization": "Bihar Govt",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": "12",
+    "turnover": "50",
+    "experience": "10",
+    "completion_period": "180"
+  },
+  {
+    "source": "Corrigendum.pdf",
+    "organization": "Bihar Govt",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "60",
+    "experience": "5",
+    "completion_period": ""
+  },
+  {
+    "source": "99772_RFP_Implementation of Unified Citizen Helpline.pdf",
+    "organization": "Bihar Govt",
+    "tender_number": "NIT/BSEDC/03/25/2025-26",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": ",",
+    "experience": "2",
+    "completion_period": "7"
+  },
+  {
+    "source": "CIMS_Tender_20260401.pdf",
+    "organization": "Bihar Govt",
+    "tender_number": "ticeNo",
+    "tender_type": "IT",
+    "emd": "4",
+    "turnover": "7",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "RFP-Document-16-04.pdf",
+    "organization": "BANK OF BARODA",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "5",
+    "experience": "5",
+    "completion_period": "30"
+  },
+  {
+    "source": "Addendum1-nd-Responses-13-23.pdf",
+    "organization": "BANK OF BARODA",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "75",
+    "experience": "3",
+    "completion_period": "15"
+  },
+  {
+    "source": "Bob-Notice-03-48.pdf",
+    "organization": "BoB",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "GeM-Bidding-05-04.pdf",
+    "organization": "BANK OF BARODA",
+    "tender_number": "t",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "4.",
+    "experience": "5",
+    "completion_period": "3"
+  },
+  {
+    "source": "RFP-CRM-05-04 (1).pdf",
+    "organization": "BANK OF BARODA",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "75",
+    "experience": "3",
+    "completion_period": "30"
+  },
+  {
+    "source": "RFP-CRM-05-04.pdf",
+    "organization": "BANK OF BARODA",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "75",
+    "experience": "3",
+    "completion_period": "30"
+  },
+  {
+    "source": "RFP-25-32.pdf",
+    "organization": "BANK OF BARODA",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "5.00",
+    "experience": "",
+    "completion_period": "15"
+  },
+  {
+    "source": "ATC-23-26.pdf",
+    "organization": "BANK OF BARODA",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "50",
+    "experience": "1",
+    "completion_period": "30"
+  },
+  {
+    "source": "4025781889473818603_161749_Pre-Bid Response.pdf",
+    "organization": "CG Govt",
+    "tender_number": "185311",
+    "tender_type": "IT",
+    "emd": "6,00,000",
+    "turnover": "15",
+    "experience": "5",
+    "completion_period": "45"
+  },
+  {
+    "source": "4964718845663203228_161749_Corrigendum.pdf",
+    "organization": "CG Govt",
+    "tender_number": "185311",
+    "tender_type": "CIVIL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "6030711658918895341_185311_NIT Document AUA_KUA (2).pdf",
+    "organization": "CG Govt",
+    "tender_number": "TICE",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "8358740836629852252_185311_RFP_185311_AUA KUA Final.pdf",
+    "organization": "CG Govt",
+    "tender_number": "185311",
+    "tender_type": "IT",
+    "emd": "6,00,000",
+    "turnover": "15",
+    "experience": "3",
+    "completion_period": "180"
+  },
+  {
+    "source": "file_20260117174020_07fc6b23-b110-466c-aa73-ddc35757f53d.pdf",
+    "organization": "CG Govt",
+    "tender_number": "TICE",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "file_20260117175002_ebde2ed3-6ae4-43e8-bd4f-cefadbae42cc.pdf",
+    "organization": "CG Govt",
+    "tender_number": "CA/CNP/NFS",
+    "tender_type": "ELECTRICAL",
+    "emd": "24",
+    "turnover": "90",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "file_20260117175313_ec84e398-5bcb-42d3-ae25-ed0ff0f328ed.pdf",
+    "organization": "CG Govt",
+    "tender_number": "CA/CNP/NFS",
+    "tender_type": "ELECTRICAL",
+    "emd": "24",
+    "turnover": "90",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "file_20260117175409_1f327b66-66fb-4545-873a-f275e25e8a47.pdf",
+    "organization": "CG Govt",
+    "tender_number": "CA/CNP/NFS",
+    "tender_type": "ELECTRICAL",
+    "emd": "24",
+    "turnover": "90",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "file_20260117175537_6906da47-4925-42bb-9d23-89515da05033.pdf",
+    "organization": "CG Govt",
+    "tender_number": "CA/CNP/NFS",
+    "tender_type": "ELECTRICAL",
+    "emd": "24",
+    "turnover": "90",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "2546-tr267allpages.pdf",
+    "organization": "CG Govt",
+    "tender_number": "TR-267",
+    "tender_type": "IT",
+    "emd": "5,000",
+    "turnover": "",
+    "experience": "01",
+    "completion_period": "150"
+  },
+  {
+    "source": "NIT_TD6187.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Vol-I (1).pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "",
+    "experience": "5",
+    "completion_period": ""
+  },
+  {
+    "source": "Vol-II.pdf",
+    "organization": "CG Govt",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "21",
+    "turnover": "",
+    "experience": "3",
+    "completion_period": "180"
+  },
+  {
+    "source": "Vol-III.pdf",
+    "organization": "CG Govt",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "2",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "30"
+  },
+  {
+    "source": "Vol-IV.pdf",
+    "organization": "CG Govt",
+    "tender_number": "dtd",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "",
+    "experience": "02",
+    "completion_period": ""
+  },
+  {
+    "source": "NIT_TD6168.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "37,290",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Vol-I.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "37,290",
+    "turnover": "13",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Vol-II (1).pdf",
+    "organization": "CG Govt",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "300",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "21"
+  },
+  {
+    "source": "Vol-III (1).pdf",
+    "organization": "CG Govt",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "",
+    "experience": "2",
+    "completion_period": "30"
+  },
+  {
+    "source": "Vol-IV (1).pdf",
+    "organization": "CG Govt",
+    "tender_number": "for",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "NIT_TD6218.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "29,000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Vol-I.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "29,000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Vol-II.pdf",
+    "organization": "CG Govt",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "300",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "120"
+  },
+  {
+    "source": "Vol-III.pdf",
+    "organization": "CG Govt",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "10"
+  },
+  {
+    "source": "Vol-IV.pdf",
+    "organization": "CG Govt",
+    "tender_number": "dtd",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "User Manual for Bidder for E-Bidding ver 3.3.pdf",
+    "organization": "CG Govt",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "7"
+  },
+  {
+    "source": "NIT_TD99806.pdf",
+    "organization": "CG Govt",
+    "tender_number": "tices",
+    "tender_type": "IT",
+    "emd": "5000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "TENDER_DOC_TD99806.pdf",
+    "organization": "CG Govt",
+    "tender_number": "tices",
+    "tender_type": "IT",
+    "emd": "5000",
+    "turnover": "12",
+    "experience": "3",
+    "completion_period": "120"
+  },
+  {
+    "source": "Tr-415_Pre-Bid-Clarifications.pdf",
+    "organization": "CG Govt",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "3",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Tr-415-RFP Final.pdf",
+    "organization": "CG Govt",
+    "tender_number": "tices",
+    "tender_type": "IT",
+    "emd": "5000",
+    "turnover": "12",
+    "experience": "3",
+    "completion_period": "120"
+  },
+  {
+    "source": "Tr-415=Pre-Bid-Clarifications.pdf",
+    "organization": "CG Govt",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "3",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "NIT_TD102406.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "10,000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "TENDER_DOC_TD102406.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "10,000",
+    "turnover": "3.92",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "NIT_TD102934.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "5,000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "TENDER_DOC_TD102934.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "5,000",
+    "turnover": "15",
+    "experience": "3",
+    "completion_period": "180"
+  },
+  {
+    "source": "NIT_TD99684.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "5,000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Signed Corrigendum-I.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Tr-413",
+    "tender_type": "CIVIL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Singed Response to Pre Bid Queries.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Tr-413",
+    "tender_type": "IT",
+    "emd": "5,00,000",
+    "turnover": "",
+    "experience": "4",
+    "completion_period": "30"
+  },
+  {
+    "source": "TENDER_DOC_TD99684.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "5,000",
+    "turnover": "9.85",
+    "experience": "14",
+    "completion_period": "180"
+  },
+  {
+    "source": "NIT_TD102863.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "TENDER_DOC_TD102863.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "3,78,443",
+    "turnover": "5.68",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "NIT_TENDER_TD102021.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Particulars",
+    "tender_type": "IT",
+    "emd": "5000",
+    "turnover": ".50",
+    "experience": "3",
+    "completion_period": "180"
+  },
+  {
+    "source": "Tr -411 Pre Bid Query_Clarification_Response.pdf",
+    "organization": "CG Govt",
+    "tender_number": "Tr-411",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "50",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "ITSD_1100000184.pdf",
+    "organization": "ECIL",
+    "tender_number": "ECIL/ITSD/PUR/1100000184",
+    "tender_type": "IT",
+    "emd": "3,00,000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "120"
+  },
+  {
+    "source": "Solomon Authorization Letter.pdf",
+    "organization": "ECIL",
+    "tender_number": "ECIL/ITSD/PUR/1100000184",
+    "tender_type": "CIVIL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "solomonraj-eaadhaar.pdf",
+    "organization": "ECIL",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "77379EOI0002.pdf",
+    "organization": "Gujrat Govt",
+    "tender_number": "KNOW",
+    "tender_type": "ELECTRICAL",
+    "emd": "2",
+    "turnover": "2.5",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "Corrigendum 2.pdf",
+    "organization": "Gujrat Govt",
+    "tender_number": "288438",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "CORRIGENDUM.pdf",
+    "organization": "Gujrat Govt",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Pre-Bid Query Responses.pdf",
+    "organization": "Gujrat Govt",
+    "tender_number": "288438",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "7.5",
+    "experience": "3",
+    "completion_period": "10"
+  },
+  {
+    "source": "RFP 288438.pdf",
+    "organization": "Gujrat Govt",
+    "tender_number": "288438",
+    "tender_type": "IT",
+    "emd": "02",
+    "turnover": "7.5",
+    "experience": "12",
+    "completion_period": "180"
+  },
+  {
+    "source": "1763465865.pdf",
+    "organization": "INDIA POST",
+    "tender_number": "___",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "2.00",
+    "experience": "2",
+    "completion_period": "15"
+  },
+  {
+    "source": "ICFSAPMigrationTenderDocument_v1_1.pdf",
+    "organization": "Integral Coach Factory",
+    "tender_number": "of",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "500",
+    "experience": "2",
+    "completion_period": "60"
+  },
+  {
+    "source": "Tender-Notcice.pdf",
+    "organization": "Integral Coach Factory",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "viewNitPdf_5360212.pdf",
+    "organization": "Integral Coach Factory",
+    "tender_number": "2026178110001",
+    "tender_type": "IT",
+    "emd": "1648500",
+    "turnover": "",
+    "experience": "5",
+    "completion_period": ""
+  },
+  {
+    "source": "Tendernotice_1 (1).pdf",
+    "organization": "IOCL",
+    "tender_number": "RPNC261001",
+    "tender_type": "IT",
+    "emd": "247000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "21"
+  },
+  {
+    "source": "Tendernotice_1.pdf",
+    "organization": "IOCL",
+    "tender_number": "PLCC/OFC",
+    "tender_type": "ELECTRICAL",
+    "emd": "5",
+    "turnover": "",
+    "experience": "10",
+    "completion_period": "28"
+  },
+  {
+    "source": "15184544EOIempanelment2023.pdf",
+    "organization": "ITI Limited",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "5",
+    "turnover": ",",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "42990Corrigendum VII.pdf",
+    "organization": "ITI Limited",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "18918047-af1e-479e-aded-f036baee8147-CESS Tracking Bid document.pdf",
+    "organization": "NTPC",
+    "tender_number": "TIFICATION",
+    "tender_type": "IT",
+    "emd": "30",
+    "turnover": "30.10",
+    "experience": "10",
+    "completion_period": "90"
+  },
+  {
+    "source": "26ce107d-3f5c-4c93-b4ed-928a95eda72b-GBA IT Revenue Manpower.pdf",
+    "organization": "Karnataka Govt",
+    "tender_number": "tification",
+    "tender_type": "IT",
+    "emd": "15,00,000",
+    "turnover": "10",
+    "experience": "2",
+    "completion_period": "15"
+  },
+  {
+    "source": "SE0101 RFP.pdf",
+    "organization": "Karnataka Govt",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "10",
+    "turnover": "1.50",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "PreBidQueriesResponse.pdf",
+    "organization": "MH Govt",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "50",
+    "experience": "3",
+    "completion_period": "15"
+  },
+  {
+    "source": "Tendernotice_1 (1).pdf",
+    "organization": "MH Govt",
+    "tender_number": "tice",
+    "tender_type": "GENERAL",
+    "emd": "1,50,00,000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Tendernotice_1.pdf",
+    "organization": "MH Govt",
+    "tender_number": "tice",
+    "tender_type": "GENERAL",
+    "emd": "1,50,00,000",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "10022026051033RFP673.pdf",
+    "organization": "MP Government",
+    "tender_number": "MPSEDC/CoE/2026/673",
+    "tender_type": "IT",
+    "emd": "3",
+    "turnover": "",
+    "experience": "1",
+    "completion_period": "180"
+  },
+  {
+    "source": "12022026055922GeM-Bidding-8799872 (1).pdf",
+    "organization": "MP Government",
+    "tender_number": "t",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "4.",
+    "experience": "3",
+    "completion_period": "2"
+  },
+  {
+    "source": "1767767049.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "2"
+  },
+  {
+    "source": "1767767054.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "10022026050354RFP671.pdf",
+    "organization": "SAIL",
+    "tender_number": "MPSEDC/SWAN/FMS/2026/671",
+    "tender_type": "IT",
+    "emd": "70,00,000",
+    "turnover": "100",
+    "experience": "5",
+    "completion_period": "7"
+  },
+  {
+    "source": "05122025113255RFP660.pdf",
+    "organization": "MP Government",
+    "tender_number": "tification",
+    "tender_type": "IT",
+    "emd": "1000",
+    "turnover": "10",
+    "experience": "5",
+    "completion_period": "60"
+  },
+  {
+    "source": "Corringedum_1.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corringedum_3.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "tech_prebid_562372.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "54,00,000",
+    "turnover": "500",
+    "experience": "5",
+    "completion_period": ""
+  },
+  {
+    "source": "Corri15.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corri374.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corri376.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corri48 (1).pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corri48.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corri79 (1).pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corri79.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corri88.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Tender346.pdf",
+    "organization": "MP Government",
+    "tender_number": "To",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "10",
+    "experience": "5",
+    "completion_period": "15"
+  },
+  {
+    "source": "Tender-IT-TR-03-2026.pdf",
+    "organization": "MP Government",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": "35,400",
+    "turnover": "80",
+    "experience": "10",
+    "completion_period": "180"
+  },
+  {
+    "source": "Tendernotice_1 - 2026-04-07T105726.158.pdf",
+    "organization": "MP Government",
+    "tender_number": "TICE",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "DateextensionTS1934 (1).pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "2",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Dateextensionts1934.pdf",
+    "organization": "MP Government",
+    "tender_number": "MD/WZ/06/PUR/NIT-325",
+    "tender_type": "IT",
+    "emd": "2",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Dateextensiontsamd1934.pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "2",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Tendernotice_1 (3).pdf",
+    "organization": "MP Government",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "TS1934.pdf",
+    "organization": "MP Government",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": "2",
+    "turnover": "5.00",
+    "experience": "5",
+    "completion_period": "7"
+  },
+  {
+    "source": "947d5bbbd3c442738448cb1718624ad7_20260420155429898.pdf",
+    "organization": "NMDC",
+    "tender_number": "tice",
+    "tender_type": "IT",
+    "emd": "22",
+    "turnover": "10",
+    "experience": "2",
+    "completion_period": "90"
+  },
+  {
+    "source": "e6a8e545dea3422bb50c0048df7c99ec_20260428164345564.pdf",
+    "organization": "NMDC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "7",
+    "completion_period": "30"
+  },
+  {
+    "source": "GeM-Bidding-9371353.pdf",
+    "organization": "NMDC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "9.",
+    "experience": "",
+    "completion_period": "2"
+  },
+  {
+    "source": "scope of work.pdf",
+    "organization": "NMDC",
+    "tender_number": "T",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": ".100",
+    "experience": "3",
+    "completion_period": "3"
+  },
+  {
+    "source": "EMP_DETAILS_10012023_n_1.pdf",
+    "organization": "SAIL",
+    "tender_number": "",
+    "tender_type": "CIVIL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "GeneralConditionsOfContract Safety.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "30"
+  },
+  {
+    "source": "Instructiontobidders.pdf",
+    "organization": "NTPC",
+    "tender_number": "t",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "7"
+  },
+  {
+    "source": "Nodeviationcertificate.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Notice For Inviting Tender.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "7",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Scope of work.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "7"
+  },
+  {
+    "source": "Special Conditions of Contract.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "12",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "120"
+  },
+  {
+    "source": "Tendernotice_1 (3).pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "7",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "1771308113.pdf",
+    "organization": "NTPC",
+    "tender_number": "tifications",
+    "tender_type": "ELECTRICAL",
+    "emd": "17",
+    "turnover": "10",
+    "experience": "",
+    "completion_period": "10"
+  },
+  {
+    "source": "1771308119.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "45"
+  },
+  {
+    "source": "1771838744.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "1771838755.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "1765428764 (1).pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "07"
+  },
+  {
+    "source": "1765428764.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "07"
+  },
+  {
+    "source": "1768473549.pdf",
+    "organization": "NTPC",
+    "tender_number": "tifications",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "10",
+    "experience": "2",
+    "completion_period": "07"
+  },
+  {
+    "source": "2ITBR2.pdf",
+    "organization": "NTPC",
+    "tender_number": "t",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "3"
+  },
+  {
+    "source": "3BDS.pdf",
+    "organization": "NTPC",
+    "tender_number": "t",
+    "tender_type": "IT",
+    "emd": "2",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "10"
+  },
+  {
+    "source": "3SCC.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "50",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "120"
+  },
+  {
+    "source": "4GCC.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "3",
+    "completion_period": "30"
+  },
+  {
+    "source": "5Annexure1SecurityandAuditScopeS4HANA321Point34R1.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "5Annexure2JhabuaPowercombinedFRSJPLNTPCR2.pdf",
+    "organization": "NTPC",
+    "tender_number": "XXXX",
+    "tender_type": "IT",
+    "emd": "4",
+    "turnover": "10",
+    "experience": "",
+    "completion_period": "15"
+  },
+  {
+    "source": "5Annexure4BackupandretentionInformationofJPLNTPCERPServer.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "7"
+  },
+  {
+    "source": "5AScopeofWorkImplemetationofSAPS4HANAonRISER120022026R2.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "5",
+    "completion_period": "10"
+  },
+  {
+    "source": "5L1BarChartforSAPS4HANAImplementation.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "5ScopeResponsibilityMatrix20022026.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "5SECTIONVIIBOOK1OF3TECHNOCOMMERCIALBIDrev20022026R1.pdf",
+    "organization": "NTPC",
+    "tender_number": "r",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "45",
+    "experience": "5",
+    "completion_period": "120"
+  },
+  {
+    "source": "8FormsFormats2R2.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "8FormsFormats3R2.pdf",
+    "organization": "SAIL",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": "165"
+  },
+  {
+    "source": "9Safety.pdf",
+    "organization": "NTPC",
+    "tender_number": "",
+    "tender_type": "ELECTRICAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Tendernotice_1 (3).pdf",
+    "organization": "NTPC",
+    "tender_number": "T",
+    "tender_type": "IT",
+    "emd": "50,00,000",
+    "turnover": "45",
+    "experience": "6",
+    "completion_period": "5"
+  },
+  {
+    "source": "26001(RFP)AI Fish Farming.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum-3.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum-5.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum2.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum26001.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum_Fish2.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "6,00,000",
+    "turnover": "6",
+    "experience": "10",
+    "completion_period": ""
+  },
+  {
+    "source": "CORRIGENDUM_Pre-Bid_Finalisation_Fish.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "12",
+    "turnover": "6",
+    "experience": "5",
+    "completion_period": "7"
+  },
+  {
+    "source": "RFP_AI-ENABLED IOT-BASED FISH FARMING .pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "4",
+    "turnover": "12",
+    "experience": "2",
+    "completion_period": "180"
+  },
+  {
+    "source": "9487EOI No ITI-MSP-EZ-AI-SOLUTIONS-OCAC-ODISHA-2026-27-003.pdf",
+    "organization": "OCAC",
+    "tender_number": "and",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "22.5",
+    "experience": "3",
+    "completion_period": "15"
+  },
+  {
+    "source": "RFP_VOL-1_Final_2_Apr_2026.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "35,00,000",
+    "turnover": ".75",
+    "experience": "3",
+    "completion_period": "180"
+  },
+  {
+    "source": "RFP_Vol_II_Final_2_Apr_2026.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "3",
+    "completion_period": "15"
+  },
+  {
+    "source": "26007(RFP)WOD (2).pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum-date-extend.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "GENERAL",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "RFP Vol 1.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "20,00,000",
+    "turnover": "13",
+    "experience": "1",
+    "completion_period": "180"
+  },
+  {
+    "source": "RFP vol II.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "1",
+    "completion_period": "30"
+  },
+  {
+    "source": "26021(RFP)Jana Sunani 2.0_1.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Jana_Sunani_RFP_Vol_I-Final_0.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "30",
+    "turnover": "30",
+    "experience": "10",
+    "completion_period": "180"
+  },
+  {
+    "source": "Jana_Sunani_RFP_Vol_II-final_0.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "10",
+    "completion_period": "15"
+  },
+  {
+    "source": "25108(RFP)e-Gov Agency-final_0.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum-Asset Monitoring.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "10",
+    "experience": "10",
+    "completion_period": "180"
+  },
+  {
+    "source": "Corrigendum-date-extend (1).pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum-date-extend-19th.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum_finacial-bid-format-updation.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "",
+    "completion_period": ""
+  },
+  {
+    "source": "Corrigendum_Pre-Bid_Asset Monitoring-final (1).pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": "",
+    "turnover": "",
+    "experience": "10",
+    "completion_period": "30"
+  },
+  {
+    "source": "Final-RFP-Asset-monitoring-development.pdf",
+    "organization": "OCAC",
+    "tender_number": "",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "10",
+    "experience": "10",
+    "completion_period": "90"
+  },
+  {
+    "source": "RFP108.pdf",
+    "organization": "Rajisthan Govt",
+    "tender_number": "TN-108",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "15",
+    "experience": "1",
+    "completion_period": "180"
+  },
+  {
+    "source": "1774248152.pdf",
+    "organization": "Sagarmala Finance Corporation Limited",
+    "tender_number": "SMFCL/ERP/2025-26/62",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "500",
+    "experience": "5",
+    "completion_period": "180"
+  },
+  {
+    "source": "GeM-Bidding-8594999 (1).pdf",
+    "organization": "SAIL",
+    "tender_number": "t",
+    "tender_type": "ELECTRICAL",
+    "emd": ",",
+    "turnover": "4.",
+    "experience": "2",
+    "completion_period": "2"
+  },
+  {
+    "source": "Gem-Bidding-seller-un-8594999-Comp92b60998147018c025c8b237feee3432.pdf",
+    "organization": "SAIL",
+    "tender_number": "",
+    "tender_type": "CIVIL",
+    "emd": "",
+    "turnover": "",
+    "experience": "2",
+    "completion_period": ""
+  },
+  {
+    "source": "CD_9000078517.pdf",
+    "organization": "SAIL",
+    "tender_number": "T",
+    "tender_type": "IT",
+    "emd": "500,000",
+    "turnover": ".",
+    "experience": "3",
+    "completion_period": "2"
+  },
+  {
+    "source": "final_tender_gps_23042026.pdf",
+    "organization": "SAIL",
+    "tender_number": "SAIL/L",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "1",
+    "experience": "03",
+    "completion_period": "10"
+  },
+  {
+    "source": "GeM-Bidding-8967029.pdf",
+    "organization": "SPPU",
+    "tender_number": "t",
+    "tender_type": "IT",
+    "emd": ",",
+    "turnover": "4.",
+    "experience": "3",
+    "completion_period": "2"
+  }
+]

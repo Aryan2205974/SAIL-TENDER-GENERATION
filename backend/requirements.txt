@@ -6,3 +6,7 @@ sentence-transformers
 reportlab
 python-multipart
 numpy
+pymupdf
+langchain-text-splitters
+rapidocr-onnxruntime
+google-genai

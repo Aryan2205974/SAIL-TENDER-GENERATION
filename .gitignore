@@ -31,3 +31,6 @@ logs/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# ML Models
+backend/models/
