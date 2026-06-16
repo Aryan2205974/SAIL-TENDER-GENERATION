@@ -378,9 +378,6 @@ export const useStore = create<AppState>((set, get) => ({
     // Phase 1: Call plan generation
     const planRes = await api.post("/api/ai/plan", { requirement_id: requirementId });
     
-    // Phase 2: Trigger the complete AI generation in background
-    await api.post("/api/ai/generate", { requirement_id: requirementId });
-    
     // Fetch full tender details (which has sections and checks initialized)
     const tenderId = planRes.data.tender_id;
     const tenderRes = await api.get(`/api/tenders/${tenderId}`);
@@ -389,6 +386,10 @@ export const useStore = create<AppState>((set, get) => ({
       tenders: [tenderRes.data, ...state.tenders],
       activeTender: tenderRes.data,
     }));
+
+    // Phase 2: Trigger the complete AI generation in background asynchronously without blocking
+    api.post("/api/ai/generate", { requirement_id: requirementId }).catch(console.error);
+    
     return tenderRes.data;
   },
 }));

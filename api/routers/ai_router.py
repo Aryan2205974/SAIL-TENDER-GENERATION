@@ -389,9 +389,17 @@ Rewrite the section/subsections to incorporate the user's instruction while main
 
 def _run_generation(tender_id: int, req_title: str, req_scope: str, user_name: str, db_url: str):
     """Background task: generate all tender sections."""
-    from sqlalchemy import create_engine
+    from sqlalchemy import create_engine, event
     from sqlalchemy.orm import sessionmaker
-    engine = create_engine(db_url, connect_args={"check_same_thread": False})
+    connect_args = {"check_same_thread": False, "timeout": 30} if db_url.startswith("sqlite") else {}
+    engine = create_engine(db_url, connect_args=connect_args)
+    @event.listens_for(engine, "connect")
+    def set_sqlite_pragma(dbapi_connection, connection_record):
+        if db_url.startswith("sqlite"):
+            cursor = dbapi_connection.cursor()
+            cursor.execute("PRAGMA journal_mode=WAL")
+            cursor.execute("PRAGMA synchronous=NORMAL")
+            cursor.close()
     BgSession = sessionmaker(bind=engine)
     db = BgSession()
 
@@ -400,11 +408,16 @@ def _run_generation(tender_id: int, req_title: str, req_scope: str, user_name: s
         if not tender:
             return
 
+        # Prefetch requirement department before starting the loop/transaction
+        company = None
+        if tender.requirement:
+            company = tender.requirement.department
+
         tender.status = models.TenderStatus.generating
         db.commit()
 
         # Reset any existing sections to pending and placeholder text on regenerate
-        existing_sections = db.query(models.TenderSection).filter(models.TenderSection.tender_id == tender.id).all()
+        existing_sections = db.query(models.TenderSection).filter(models.TenderSection.tender_id == tender_id).all()
         for s in existing_sections:
             s.content = f"# {s.section_name}\n\n*Generating content... please wait.*"
             s.status = models.ValidationStatus.pending
@@ -425,7 +438,7 @@ def _run_generation(tender_id: int, req_title: str, req_scope: str, user_name: s
                         section=section_name,
                         subsection=sub,
                         target_words=200,
-                        company=tender.requirement.department if tender.requirement else None,
+                        company=company,
                     )
                     text = sanitize_text(text)
                 except Exception as e:
@@ -449,7 +462,7 @@ def _run_generation(tender_id: int, req_title: str, req_scope: str, user_name: s
 
             # Update section in DB (or create if missing)
             sec = db.query(models.TenderSection).filter_by(
-                tender_id=tender.id, section_name=section_name
+                tender_id=tender_id, section_name=section_name
             ).first()
             if sec:
                 sec.content = section_text
@@ -457,7 +470,7 @@ def _run_generation(tender_id: int, req_title: str, req_scope: str, user_name: s
                 sec.order_index = list(SECTION_TEMPLATES.keys()).index(section_name)
             else:
                 sec = models.TenderSection(
-                    tender_id=tender.id,
+                    tender_id=tender_id,
                     section_name=section_name,
                     content=section_text,
                     status=models.ValidationStatus.completed,
@@ -470,6 +483,11 @@ def _run_generation(tender_id: int, req_title: str, req_scope: str, user_name: s
             
             # Commit immediately so frontend can fetch each section as it is generated!
             db.commit()
+
+        # Re-fetch tender to update final status, avoiding issues with lazy loading or expired states
+        tender = db.query(models.Tender).filter(models.Tender.id == tender_id).first()
+        if not tender:
+            return
 
         tender.draft_content = "\n\n".join(full_content)
         tender.status = models.TenderStatus.generated
