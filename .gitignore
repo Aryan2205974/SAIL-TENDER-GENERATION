@@ -24,6 +24,8 @@ node_modules/
 # Local databases and logs
 *.db
 *.db-journal
+*.db-shm
+*.db-wal
 *.sqlite3
 logs/
 *.log

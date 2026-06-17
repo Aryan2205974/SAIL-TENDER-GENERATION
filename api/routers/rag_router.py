@@ -7,7 +7,7 @@ import models, schemas
 from auth import get_current_user
 
 # Add backend to Python path so we can import the existing AI engine
-BACKEND_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "backend")
+BACKEND_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "backend")
 if BACKEND_DIR not in sys.path:
     sys.path.append(BACKEND_DIR)
 
